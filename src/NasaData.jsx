@@ -56,7 +56,7 @@ export default function NasaData() {
   console.log(data);
 
   return (
-    <Card sx={{ bgcolor: '#cfe8fc', width: '75%'}}>
+    <Card sx={{ bgcolor: '', width: '75%'}}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[400] }} aria-label="recipe">
@@ -72,12 +72,21 @@ export default function NasaData() {
         subheader= {data.date}
       />
 
-      <CardMedia
+      {/* <CardMedia
         component="img"
-        height="194"
-        image="/static/images/cards/paella.jpg"
+        height="400vh"
+        image="https://apod.nasa.gov/apod/image/2205/NGC1512inner_Hubble_960.jpg"
         alt="Paella dish"
+      /> */}
+      < CardMedia
+        component="iframe" 
+        height="400"
+        autoPlay 
+        controls 
+        margin = "auto"
+        src={data.url}
       />
+
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           This impressive paella is a perfect party dish and a fun meal to cook
