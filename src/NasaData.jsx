@@ -40,8 +40,9 @@ export default function NasaData() {
   const apikey ='yCx4CvIFFGFlQ1ktyufm8yCoYOnS97jY6UdcEcSp';
 
   const getApiData = async () => {
+    //demokey is your nasa api
     const response = await fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=yCx4CvIFFGFlQ1ktyufm8yCoYOnS97jY6UdcEcSp"
+      "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
     ).then((response) => response.json());
     // update the state
     setData(response);
